@@ -1,0 +1,1 @@
+#import TLU from TLU import TLUclassif __name__ == "__main__":    classb = TLUclass(filename = 'advanced_python.csv')    classb.getstudentsbycode()    pythonclass = TLUclass('advanced_python.csv')    print(pythonclass.getstudentsbycode('A36708'))
