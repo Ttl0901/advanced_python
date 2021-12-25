@@ -1,6 +1,8 @@
 from flask import Flask
 from flask import render_template, request
+import pandas as pd
 app = Flask(__name__)
+df = pd.read_csv('advanced_python.csv', sep = ';')
 
 @app.route('/')
 def hello_world():
@@ -26,6 +28,11 @@ def mul(a,b):
 @app.route('/thread/<string:posttitle>')
 def getpage(posttitle):
     return f"querying post via {posttitle}"
+
+@app.route('/student/code/<string:studentcode>')
+def getstudentviacode(studentcode):
+    result = df[df['student code'] == studentcode].to_html()
+    return result
 ### REQUIREMNTS:
 """
 - create a routing which allow user to show author info: /author
