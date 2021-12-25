@@ -30,6 +30,7 @@ def getpage(posttitle):
 """
 - create a routing which allow user to show author info: /author
 - a routing which allow user get total of 2 numbers: /add
+- implementing a list funcs for querying data in advanced_python.csv
 """
 if __name__ == '__main__':
    app.run()
